@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boleta Electrónica</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="#proyecto">Proyecto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="inicio">
+            <div class="hero">
+                <h1 class="titulo-grande">Boleta Electrónica</h1>
+                <h2 class="subtitulo">Proyecto Algoritmos</h2>
+            </div>
+        </section>
+        <section id="carrusel">
+    <div class="carousel-container">
+        <div class="carousel-slide ">
+            <img src="image/1.jpg" alt="Boleta de venta electrónica">
+        </div>
+        <div class="carousel-slide">
+            <img src="image/2.jpg" alt="Image 2">
+        </div>
+        <div class="carousel-slide">
+            <img src="image/3.jpg" alt="Image 3">
+        </div>
+    </div>
+    <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+    <button class="next" onclick="moveSlide(1)">&#10095;</button>
+</section>
+        
+        <section id="nosotros" class="section-centered compact">
+            <h2>Sobre Nosotros</h2>
+            <div class="sobre-nosotros">
+                <p>Bienvenidos al servicio de emisión de boletas electrónicas. Nuestro objetivo es facilitar el proceso de generación y gestión de boletas electrónicas para empresas y profesionales independientes. Ofrecemos una plataforma segura y eficiente para emitir y consultar boletas electrónicas en línea. Con esto puedes automatizar el proceso de creación de boletas y reducir errores administrativos. Si necesitas asistencia, nuestro equipo de soporte está aquí para ayudarte en cada paso.</p>
+            </div>
+        </section>
+        <section id="servicios" class="section-centered compact">
+            <h2>Servicios</h2>
+            <div class="servicios-container">
+                <div class="servicio">
+                    <h3>1. Servicio de generación automática de boletas electrónicas</h3>
+                    <p>Este servicio automatiza el proceso de creación de boletas electrónicas a partir de datos de ventas o facturas existentes.</p>
+                </div>
+                <div class="servicio">
+                    <h3>2. Servicio de portal web y aplicación móvil para la gestión de boletas electrónicas</h3>
+                    <p>Este servicio proporciona un portal web y una aplicación móvil para que los usuarios puedan gestionar sus boletas electrónicas de forma fácil y cómoda.</p>
+                </div>
+            </div>
+        </section>
+        <section id="contacto" class="section-centered compact">
+            <h2>Contacto</h2>
+            <div class="contacto-container">
+                <div class="contacto-item">
+                    <p>UBICACIÓN: A.V Municipal</p>
+                </div>
+                <div class="contacto-item">
+                    <p>NUESTRAS REDES:</p>
+                    <div class="redes">
+                        <a href="https://www.facebook.com/login"><img src="https://img.icons8.com/color/48/000000/facebook.png" alt="Facebook"></a>
+                        <a href="https://www.tiktok.com/login"><img src="https://img.icons8.com/color/48/000000/tiktok.png" alt="TikTok"></a>
+                        <a href="https://www.youtube.com/"><img src="https://img.icons8.com/color/48/000000/youtube-play.png" alt="YouTube"></a>
+                    </div>
+                </div>
+                <div class="contacto-item">
+                    <p>CORREO ELECTRÓNICO: boleta2024electronica@hotmail.com</p>
+                </div>
+                <div class="contacto-item">
+                    <p>TELÉFONO CEL: 920006773</p>
+                </div>
+                
+            </div>
+            <div id="mapa">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3870.227898354561!2d-75.732251025693!3d-14.063715486361401!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9110e2be6ec33b3b%3A0xf931e27e8358c9a0!2sAv.%20Municipalidad%2C%20Ica%2011001!5e0!3m2!1ses-419!2spe!4v1716670642588!5m2!1ses-419!2spe" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="contacto-formulario">
+                <h3>Contactar al Autor</h3>
+                <form id="formularioContacto">
+                    <label for="contactoNombre">Nombre:</label>
+                    <input type="text" id="contactoNombre" required pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ ]+">
+        
+                    <label for="contactoEmail">E-mail:</label>
+                    <input type="email" id="contactoEmail" required>
+        
+                    <label for="contactoNumero">Número de Contacto:</label>
+                    <input type="tel" id="contactoNumero" required pattern="[0-9]+">
+        
+                    <label for="contactoAsunto">Asunto:</label>
+                    <textarea id="contactoAsunto" required></textarea>
+        
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+        </section>
+        
+        <section id="proyecto" class="section-centered compact">
+            <h2>Proyecto</h2>
+            <form id="formularioBoleta">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+                <label for="fecha">Fecha:</label>
+                <input type="date" id="fecha" name="fecha" required>
+                <label for="producto">Producto:</label>
+                <input type="text" id="producto" name="producto" required>
+                <label for="cantidad">Cantidad:</label>
+                <input type="number" id="cantidad" name="cantidad" required>
+                <label for="precio">Precio:</label>
+                <input type="number" step="0.01" id="precio" name="precio" required>
+                <button type="submit">Generar Boleta</button>
+            </form>
+            <div class="boleta" id="boleta">
+                <h3>Boleta Electrónica</h3>
+                <table>
+                    <tr>
+                        <td><strong>Número de Boleta:</strong></td>
+                        <td><span id="numeroBoleta"></span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Fecha de Emisión:</strong></td>
+                        <td><span id="fechaEmision"></span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Nombre:</strong></td>
+                        <td><span id="boletaNombre"></span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Producto:</strong></td>
+                        <td><span id="boletaProducto"></span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Cantidad:</strong></td>
+                        <td><span id="boletaCantidad"></span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Precio Unitario:</strong></td>
+                        <td>s/.<span id="boletaPrecio"></span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Total:</strong></td>
+                        <td>s/.<span id="boletaTotal"></span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Descuentos:</strong></td>
+                        <td>s/.<span id="boletaDescuentos"></span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Impuestos:</strong></td>
+                        <td>s/.<span id="boletaImpuestos"></span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Total a Pagar:</strong></td>
+                        <td>s/.<span id="boletaTotalPagar"></span></td>
+                    </tr>
+                </table>
+            </div>
+            <section id="informacion-adicional" class="section-centered compact">
+                <div class="botones-container">
+                    <button id="mostrarIntegrantes">Integrantes</button>
+                    <button id="mostrarCurso">Curso</button>
+                </div>
+                <div id="contenidoIntegrantes" class="contenido-oculto integrantes">
+                    <h2>Integrantes</h2>
+                    <ul>
+                        <li class="nombre">CASTILLO BARRIO JESUS</li>
+                        <li class="nombre">CORONACIÓN YACHE GUISEPHY</li>
+                        <li class="nombre">QUISPE GONZALES KEYLOR</li>
+                        <li class="nombre">MORÓN CAHUA JOSÉ</li>
+                        <li class="nombre">VILCAMIZA PACHAS JUAN</li>
+                        <li class="nombre">HUAMAN HUAMAN JOSEPH SAIR</li>
+                    </ul>
+                </div>
+                <div id="contenidoCurso" class="contenido-oculto curso">
+                    <h2>Curso</h2>
+                    <p class="titulo">ALGORITMOS Y ESTRUCTURA DE DATOS</p>
+                    <p class="detalle">DOCENTE: Mg. LUIS ALFREDO CASTILLON SIGUAS</p>
+                    <p class="detalle">CICLO: II</p>
+                    <p class="detalle">ICA - PERÚ 2024</p>
+                    <p class="detalle">PROYECTO FINAL</p>
+                </div>
+            </section>
+            
+            
+        </section>
+        <section id="infinite-carousel2">
+            <div class="slider">
+              <div class="slide-track">
+                <div class="slide">
+                  <img src="image/6.png" height="100" width="250" alt="Imagen carrusel" />
+                  <img src="image/6.png" height="100" width="250" alt="Imagen carrusel" />
+                  <img src="image/6.png" height="100" width="250" alt="Imagen carrusel" />
+                  <img src="image/6.png" height="100" width="250" alt="Imagen carrusel" />
+                  <img src="image/6.png" height="100" width="250" alt="Imagen carrusel" />
+                  <img src="image/6.png" height="100" width="250" alt="Imagen carrusel" />
+                  <img src="image/6.png" height="100" width="250" alt="Imagen carrusel" />
+                  <img src="image/6.png" height="100" width="250" alt="Imagen carrusel" />
+                  <img src="image/6.png" height="100" width="250" alt="Imagen carrusel" />
+                  <img src="image/6.png" height="100" width="250" alt="Imagen carrusel" />
+                  <img src="image/6.png" height="100" width="250" alt="Imagen carrusel" />
+                  
+                </div>
+            
+              </div>
+            </div>
+          </section>
+          <section id="pageCounterSection">
+            <div id="pageCounter">Vistas de página: <span id="viewCount">0</span></div>
+          </section>
+    </main>
+    <footer>
+        <p>© 2024 Boleta Electrónica. Todos los derechos reservados.</p>
+    </footer>
+    <script src="script/script.js"></script>
+</body>
+</html>

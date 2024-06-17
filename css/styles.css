@@ -1,0 +1,564 @@
+/* Estilos generales */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  background-color: #7FFFD4; /* Verde cian */
+}
+
+header {
+  background-color: #333;
+  color: white;
+  padding: 10px 0;
+  text-align: center;
+}
+
+header nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+header nav ul li {
+  display: inline;
+  margin-right: 15px;
+}
+
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s, transform 0.3s;
+}
+
+header nav ul li a:hover {
+  color: #ff4500;
+  transform: scale(1.1);
+}
+
+main {
+  padding: 20px;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+h1, h2 {
+  color: #333;
+}
+
+h1 {
+  font-size: 2.5em;
+}
+
+h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.hero {
+  position: relative;
+  height: 400px; /* Ajusta la altura según tu preferencia */
+  background-image: url('https://jumpseller.cl/generated/images/learn/others/invoice-800-acec6c529.png'); /* Ruta relativa de la imagen de fondo */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white; /* Color de texto blanco para contrastar con la imagen */
+  animation: fadeIn 2s;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Estilos para secciones centradas y compactas */
+.section-centered {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.sobre-nosotros, .servicios-container, .contacto-container, .boleta {
+  background-color: rgb(248, 244, 244); /* Fondo blanco para los cuadros de información */
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  transition: transform 0.3s;
+}
+
+.sobre-nosotros:hover, .servicio:hover, .contacto-item:hover, .boleta:hover {
+  transform: translateY(-10px);
+}
+
+.sobre-nosotros p,
+.servicio p,
+.contacto-item p {
+  color: #0c0fdb;
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
+/* Estilos para servicios y contacto */
+.servicios-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.servicio, .contacto-item {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.servicio:hover, .contacto-item:hover {
+  background-color: #f1f1f1;
+  transform: translateY(-5px);
+}
+
+.contacto-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.redes {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.redes a {
+  display: inline-block;
+}
+
+.redes img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  transition: transform 0.3s;
+}
+
+.redes img:hover {
+  transform: scale(1.1);
+}
+
+#mapa {
+  text-align: center;
+  margin: 20px 0;
+}
+
+#mapa iframe {
+  border: 5px solid #ff4500;
+  border-radius: 10px;
+  max-width: 100%;
+}
+
+#proyecto {
+  margin-top: 40px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+form label {
+  font-weight: bold;
+}
+
+form input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+form input:focus {
+  border-color: #ff4500;
+  box-shadow: 0 0 5px rgba(255, 69, 0, 0.5);
+}
+
+form button {
+  padding: 10px 20px;
+  background-color: #ff4500;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+form button:hover {
+  background-color: #e63900;
+  transform: scale(1.05);
+}
+
+.boleta {
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+.boleta h3 {
+  margin-bottom: 20px;
+  text-align: center;
+  color: #ff4500;
+}
+
+.boleta table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.boleta table, .boleta th, .boleta td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+
+.boleta th {
+  background-color: #ff4500;
+  color: white;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Ajustes de diseño responsivo */
+@media (max-width: 768px) {
+  .servicios-container, .contacto-container {
+      flex-direction: column;
+  }
+
+  header nav ul li {
+      display: block;
+      margin-bottom: 10px;
+  }
+
+  header nav ul li a {
+      display: block;
+      padding: 10px;
+      text-align: center;
+  }
+
+  #mapa iframe {
+      width: 100%;
+      height: auto;
+  }
+
+  .boleta {
+      max-width: 100%;
+  }
+}
+/* Botones adicionales */
+.botones-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.botones-container button {
+  padding: 10px 20px;
+  background-color: #282c34;  /* Color oscuro estilo IDE */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  font-family: 'Courier New', Courier, monospace; /* Fuente monoespaciada */
+}
+
+.botones-container button:hover {
+  background-color: #3a3f47;
+  transform: scale(1.05);
+}
+
+.contenido-oculto {
+  display: none;
+  margin-top: 20px;
+  background-color: #282c34;  /* Color de fondo estilo IDE */
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  color: #abb2bf;  /* Color del texto estilo IDE */
+  font-family: 'Courier New', Courier, monospace; /* Fuente monoespaciada */
+  white-space: pre-line; /* Para que se respeten los saltos de línea */
+}
+
+.contenido-oculto h2 {
+  color: #61dafb;  /* Color del título estilo IDE */
+  margin-bottom: 10px;
+}
+
+.contenido-oculto ul, .contenido-oculto p {
+  font-size: 1.1em;
+  color: #abb2bf;  /* Color del texto estilo IDE */
+  line-height: 1.6;
+}
+
+.contenido-oculto ul {
+  padding-left: 20px;
+}
+
+.contenido-oculto ul li {
+  list-style: none;
+}
+
+.contenido-oculto ul li::before {
+  content: "• ";
+  color: #e06c75;  /* Color de los puntos estilo IDE */
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+  .botones-container {
+      flex-direction: column;
+  }
+}
+
+/* Colores estilo IDE para los nombres */
+.integrantes .nombre {
+  color: #98c379; /* Color verde para nombres */
+}
+
+.curso .titulo {
+  color: #e5c07b; /* Color amarillo para títulos */
+}
+
+.curso .detalle {
+  color: #61dafb; /* Color azul claro para detalles */
+}
+.contacto-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.contacto-item, .contacto-formulario {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  width: 45%;
+  box-sizing: border-box;
+}
+
+.contacto-formulario {
+  width: 100%;
+}
+
+.contacto-formulario h3 {
+  margin-bottom: 20px;
+}
+
+.contacto-formulario form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contacto-formulario label {
+  font-weight: bold;
+}
+
+.contacto-formulario input, .contacto-formulario textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  width: 100%;
+}
+
+.contacto-formulario textarea {
+  resize: vertical;
+  height: 100px;
+}
+
+.contacto-formulario input:focus, .contacto-formulario textarea:focus {
+  border-color: #ff4500;
+  box-shadow: 0 0 5px rgba(255, 69, 0, 0.5);
+}
+
+.contacto-formulario button {
+  padding: 10px 20px;
+  background-color: #ff4500;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.contacto-formulario button:hover {
+  background-color: #e63900;
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .contacto-container {
+      flex-direction: column;
+  }
+
+  .contacto-item, .contacto-formulario {
+      width: 100%;
+  }
+}
+
+
+/* Carrusel1 */
+#carrusel {
+  position: relative;
+  max-width: 800px;
+  margin: 20px auto;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-container {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+  min-width: 100%;
+  box-sizing: border-box;
+}
+
+.carousel-slide img {
+  width: 100%;
+  display: block;
+  border-radius: 10px;
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 10px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: background-color 0.6s ease;
+  user-select: none;
+  border: none;
+  cursor: pointer;
+}
+
+.prev {
+  left: 0;
+  border-radius: 0 10px 10px 0;
+}
+
+.next {
+  right: 0;
+  border-radius: 10px 0 0 10px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+
+
+/* Estilos para el contenedor del carrusel */
+#infinite-carousel2 {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Estilos para el carrusel y las imágenes */
+.slider {
+  display: flex;
+  white-space: nowrap;
+  animation: desplazar-carrusel 10s linear infinite;
+}
+
+.slide {
+  flex: 0 0 auto;
+  width: 250px; /* Ajusta el ancho según el tamaño de tus imágenes */
+}
+
+.slide img {
+  width: 100%;
+  height: 100px; /* Ajusta la altura según tus necesidades */
+  object-fit: cover;
+}
+
+/* Animación para el desplazamiento automático */
+@keyframes desplazar-carrusel {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+
+
+
+
+#pageCounterSection {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+
+
+
+/* CSS para ocultar todas las diapositivas excepto la activa inicialmente */
+.carousel-slide {
+  display: none;
+}
+
+.carousel-slide.active {
+  display: block;
+}
